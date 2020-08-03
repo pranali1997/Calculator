@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  calculator:
+    image: calculator:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - spring_datasource_url=jdbc:postgresql://host.docker.internal:5432/calculator
+      - spring_profiles_active=dev
