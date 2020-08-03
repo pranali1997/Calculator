@@ -1,0 +1,43 @@
+16:50:47:395 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - Starting CalculatorControllerMockServiceTest on Pranalis-MacBook-Pro.local with PID 4313 (started by pranali in /Users/pranali/Desktop/calculator)
+16:50:47:396 [Test worker] DEBUG c.t.c.c.CalculatorControllerMockServiceTest - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+16:50:47:396 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - The following profiles are active: test
+16:50:49:030 [Test worker] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+16:50:49:643 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+16:50:49:643 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+16:50:49:677 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 34 ms
+16:50:49:743 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - Started CalculatorControllerMockServiceTest in 8.033 seconds (JVM running for 9.478)
+16:50:50:015 [Test worker] INFO  c.t.c.c.CalculatorController - 5 + 2 = 0
+16:50:50:085 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+16:58:37:826 [Test worker] INFO  c.t.c.CalculatorApplicationTests - Starting CalculatorApplicationTests on Pranalis-MacBook-Pro.local with PID 4338 (started by pranali in /Users/pranali/Desktop/calculator)
+16:58:37:827 [Test worker] DEBUG c.t.c.CalculatorApplicationTests - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+16:58:37:827 [Test worker] INFO  c.t.c.CalculatorApplicationTests - The following profiles are active: test
+16:58:40:066 [Test worker] INFO  c.t.c.CalculatorApplicationTests - Started CalculatorApplicationTests in 7.525 seconds (JVM running for 8.524)
+16:58:40:211 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - Starting CalculatorControllerMockServiceTest on Pranalis-MacBook-Pro.local with PID 4338 (started by pranali in /Users/pranali/Desktop/calculator)
+16:58:40:211 [Test worker] DEBUG c.t.c.c.CalculatorControllerMockServiceTest - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+16:58:40:211 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - The following profiles are active: test
+16:58:40:567 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - Started CalculatorControllerMockServiceTest in 0.38 seconds (JVM running for 9.026)
+16:58:40:675 [Test worker] INFO  c.t.c.c.CalculatorController - 5 + 2 = 0
+16:58:40:703 [Test worker] INFO  c.t.c.c.CalculatorController - 5 / 2 = 0
+16:58:40:710 [Test worker] INFO  c.t.c.c.CalculatorController - 5 - 2 = 0
+16:58:40:744 [Test worker] INFO  c.t.c.c.CalculatorControllerTest - Starting CalculatorControllerTest on Pranalis-MacBook-Pro.local with PID 4338 (started by pranali in /Users/pranali/Desktop/calculator)
+16:58:40:744 [Test worker] DEBUG c.t.c.c.CalculatorControllerTest - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+16:58:40:745 [Test worker] INFO  c.t.c.c.CalculatorControllerTest - The following profiles are active: test
+16:58:41:295 [Test worker] INFO  c.t.c.c.CalculatorControllerTest - Started CalculatorControllerTest in 0.577 seconds (JVM running for 9.754)
+16:58:41:340 [Test worker] INFO  c.t.c.c.CalculatorController - 5 + 3 = 8
+16:58:41:355 [Test worker] INFO  c.t.c.c.CalculatorController - 5 / 3 = 1
+16:58:41:362 [Test worker] INFO  c.t.c.c.CalculatorController - 5 - 3 = 2
+16:58:55:006 [Test worker] INFO  c.t.c.CalculatorApplicationTests - Starting CalculatorApplicationTests on Pranalis-MacBook-Pro.local with PID 4362 (started by pranali in /Users/pranali/Desktop/calculator)
+16:58:55:007 [Test worker] DEBUG c.t.c.CalculatorApplicationTests - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+16:58:55:007 [Test worker] INFO  c.t.c.CalculatorApplicationTests - The following profiles are active: test
+16:58:57:119 [Test worker] INFO  c.t.c.CalculatorApplicationTests - Started CalculatorApplicationTests in 7.386 seconds (JVM running for 8.334)
+16:58:57:262 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - Starting CalculatorControllerMockServiceTest on Pranalis-MacBook-Pro.local with PID 4362 (started by pranali in /Users/pranali/Desktop/calculator)
+16:58:57:263 [Test worker] DEBUG c.t.c.c.CalculatorControllerMockServiceTest - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+16:58:57:263 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - The following profiles are active: test
+16:58:57:595 [Test worker] INFO  c.t.c.c.CalculatorControllerMockServiceTest - Started CalculatorControllerMockServiceTest in 0.355 seconds (JVM running for 8.81)
+16:58:57:702 [Test worker] INFO  c.t.c.c.CalculatorController - 5 + 2 = 0
+16:58:57:727 [Test worker] INFO  c.t.c.c.CalculatorController - 5 / 2 = 0
+16:58:57:734 [Test worker] INFO  c.t.c.c.CalculatorController - 5 - 2 = 0
+16:58:57:759 [Test worker] INFO  c.t.c.c.CalculatorControllerTest - Starting CalculatorControllerTest on Pranalis-MacBook-Pro.local with PID 4362 (started by pranali in /Users/pranali/Desktop/calculator)
+16:58:57:759 [Test worker] DEBUG c.t.c.c.CalculatorControllerTest - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+16:58:57:759 [Test worker] INFO  c.t.c.c.CalculatorControllerTest - The following profiles are active: test
+16:58:58:299 [Test worker] INFO  c.t.c.c.CalculatorControllerTest - Started CalculatorControllerTest in 0.555 seconds (JVM running for 9.513)

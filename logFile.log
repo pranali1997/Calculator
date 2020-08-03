@@ -1,0 +1,11 @@
+16:58:58:341 [Test worker] INFO  c.t.c.c.CalculatorController - 5 + 3 = 8
+16:58:58:357 [Test worker] INFO  c.t.c.c.CalculatorController - 5 / 3 = 1
+16:58:58:363 [Test worker] INFO  c.t.c.c.CalculatorController - 5 - 3 = 2
+16:59:10:088 [main] INFO  c.t.calculator.CalculatorApplication - Starting CalculatorApplication on Pranalis-MacBook-Pro.local with PID 4385 (/Users/pranali/Desktop/calculator/build/classes/java/main started by pranali in /Users/pranali/Desktop/calculator)
+16:59:10:089 [main] DEBUG c.t.calculator.CalculatorApplication - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+16:59:10:089 [main] INFO  c.t.calculator.CalculatorApplication - The following profiles are active: dev
+16:59:12:136 [main] INFO  c.t.calculator.CalculatorApplication - Started CalculatorApplication in 7.368 seconds (JVM running for 7.654)
+17:00:42:972 [http-nio-8080-exec-1] INFO  c.t.c.c.CalculatorController - 10 / 5 = 2
+17:00:57:097 [http-nio-8080-exec-3] INFO  c.t.c.c.CalculatorController - 10 - 3 = 7
+17:01:01:026 [http-nio-8080-exec-4] INFO  c.t.c.c.CalculatorController - 10 + 3 = 13
+17:01:05:847 [http-nio-8080-exec-5] INFO  c.t.c.c.CalculatorController - 10 + 4 = 14

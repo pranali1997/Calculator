@@ -56,7 +56,7 @@ public class CalculatorServiceTest {
         CalculatorService calculatorService = new CalculatorService(calculatorRepository);
         when(calculatorRepository.save(any())).thenReturn(values);
         DivisionNotPossibleException divisionNotPossibleException = assertThrows(DivisionNotPossibleException.class, () -> calculatorService.division(values));
-        assertThat(divisionNotPossibleException.getMessage(), Matchers.is("can't divide by zero"));
+        assertThat(divisionNotPossibleException.getMessage(), Matchers.is("number can't divide by zero"));
     }
 
 }
