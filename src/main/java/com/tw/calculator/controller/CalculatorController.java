@@ -1,6 +1,7 @@
 package com.tw.calculator.controller;
 
 import com.tw.calculator.exceptions.DivisionNotPossibleException;
+import com.tw.calculator.exceptions.InvalidInputException;
 import com.tw.calculator.model.InputRequest;
 import com.tw.calculator.service.CalculatorService;
 import lombok.extern.slf4j.Slf4j;
@@ -38,7 +39,7 @@ public class CalculatorController {
     }
 
     @PostMapping("/div")
-    public ResponseEntity div(@RequestBody InputRequest inputRequest) throws DivisionNotPossibleException {
+    public ResponseEntity div(@RequestBody InputRequest inputRequest) throws DivisionNotPossibleException, InvalidInputException, NoSuchFieldException {
         int division = calculatorService.division(inputRequest);
         log.info(inputRequest.getNumber1() + " / " + inputRequest.getNumber2() + " = " + inputRequest.getResult());
         return new ResponseEntity(division, HttpStatus.OK);

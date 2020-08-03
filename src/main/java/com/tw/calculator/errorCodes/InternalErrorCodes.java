@@ -1,7 +1,8 @@
 package com.tw.calculator.errorCodes;
 
 public enum InternalErrorCodes {
-    CAN_NOT_DIVISIBLE_BY_ZERO("500");
+    CAN_NOT_BE_DIVIDED_BY_ZERO("400"),
+    INVALID_INPUT("400");
 
     private final String code;
 

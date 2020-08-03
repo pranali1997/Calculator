@@ -38,11 +38,11 @@ public class CalculatorService {
     }
 
     public int division(InputRequest inputRequest) throws DivisionNotPossibleException {
-        int number1 = inputRequest.getNumber1();
+        int result = 0;
         if (inputRequest.getNumber2() == 0) {
-            throw new DivisionNotPossibleException(InternalErrorCodes.CAN_NOT_DIVISIBLE_BY_ZERO, "can't divide by zero");
+            throw new DivisionNotPossibleException(InternalErrorCodes.CAN_NOT_BE_DIVIDED_BY_ZERO, "number can't divide by zero");
         }
-        int result = inputRequest.getNumber1() / inputRequest.getNumber2();
+        result = inputRequest.getNumber1() / inputRequest.getNumber2();
         inputRequest.setResult(result);
         inputRequest.setCalcType("%");
         calculatorRepository.save(inputRequest);
