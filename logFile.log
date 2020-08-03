@@ -1,11 +1,14 @@
-16:58:58:341 [Test worker] INFO  c.t.c.c.CalculatorController - 5 + 3 = 8
-16:58:58:357 [Test worker] INFO  c.t.c.c.CalculatorController - 5 / 3 = 1
-16:58:58:363 [Test worker] INFO  c.t.c.c.CalculatorController - 5 - 3 = 2
-16:59:10:088 [main] INFO  c.t.calculator.CalculatorApplication - Starting CalculatorApplication on Pranalis-MacBook-Pro.local with PID 4385 (/Users/pranali/Desktop/calculator/build/classes/java/main started by pranali in /Users/pranali/Desktop/calculator)
-16:59:10:089 [main] DEBUG c.t.calculator.CalculatorApplication - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
-16:59:10:089 [main] INFO  c.t.calculator.CalculatorApplication - The following profiles are active: dev
-16:59:12:136 [main] INFO  c.t.calculator.CalculatorApplication - Started CalculatorApplication in 7.368 seconds (JVM running for 7.654)
-17:00:42:972 [http-nio-8080-exec-1] INFO  c.t.c.c.CalculatorController - 10 / 5 = 2
-17:00:57:097 [http-nio-8080-exec-3] INFO  c.t.c.c.CalculatorController - 10 - 3 = 7
-17:01:01:026 [http-nio-8080-exec-4] INFO  c.t.c.c.CalculatorController - 10 + 3 = 13
-17:01:05:847 [http-nio-8080-exec-5] INFO  c.t.c.c.CalculatorController - 10 + 4 = 14
+7524 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+7641 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+7649 [main] INFO  c.t.c.CalculatorApplication - Started CalculatorApplication in 7.486 seconds (JVM running for 7.799)
+13735 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13735 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13740 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+13868 [http-nio-8080-exec-2] INFO  c.t.c.c.CalculatorController - 1 / 1 = 1
+16852 [http-nio-8080-exec-3] INFO  c.t.c.c.CalculatorController - 20 + 10 = 30
+19562 [http-nio-8080-exec-4] INFO  c.t.c.c.CalculatorController - 20 - 10 = 10
+115761 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+115762 [SpringContextShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+115772 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+115772 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+115777 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

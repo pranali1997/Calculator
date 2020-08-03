@@ -1,0 +1,37 @@
+7610 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+7733 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+7741 [main] INFO  c.t.c.CalculatorApplication - Started CalculatorApplication in 7.594 seconds (JVM running for 7.879)
+9621 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+9622 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+9628 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+13267 [http-nio-8080-exec-3] INFO  c.t.c.c.CalculatorController - 20 - 10 = 10
+17442 [http-nio-8080-exec-4] INFO  c.t.c.c.CalculatorController - 20 + 10 = 30
+26193 [http-nio-8080-exec-5] INFO  c.t.c.c.CalculatorController - 1 / 1 = 1
+170227 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+170227 [SpringContextShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+170239 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+170239 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+170246 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+5592 [Test worker] INFO  c.t.c.CalculatorApplicationTests - Starting CalculatorApplicationTests on Pranalis-MacBook-Pro.local with PID 5232 (started by pranali in /Users/pranali/Desktop/calculator)
+5593 [Test worker] DEBUG c.t.c.CalculatorApplicationTests - Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+5593 [Test worker] INFO  c.t.c.CalculatorApplicationTests - The following profiles are active: test
+6059 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+6123 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54ms. Found 1 JPA repository interfaces.
+6539 [Test worker] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+6551 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+6754 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+6833 [task-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+6881 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.18.Final
+7019 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+7024 [task-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+7131 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+7466 [Test worker] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+7518 [Test worker] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+7679 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+7686 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+7829 [Test worker] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+7837 [Test worker] INFO  c.t.c.CalculatorApplicationTests - Started CalculatorApplicationTests in 7.54 seconds (JVM running for 8.483)
+7936 [Test worker] INFO  o.s.b.t.a.w.s.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.tw.calculator.controller.CalculatorControllerMockServiceTest], using SpringBootContextLoader
+7936 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.tw.calculator.controller.CalculatorControllerMockServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+7936 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.tw.calculator.controller.CalculatorControllerMockServiceTest]: CalculatorControllerMockServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+7953 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.tw.calculator.CalculatorApplication for test class com.tw.calculator.controller.CalculatorControllerMockServiceTest
