@@ -35,8 +35,7 @@ public class CustomCalculatorFilter implements Filter {
 
         try {
             chain.doFilter(requestWrapper, responseWrapper);
-        }
-        finally {
+        } finally {
             String request1 = new String(requestWrapper.getContentAsByteArray());
             String response1 = new String(responseWrapper.getContentAsByteArray());
 
@@ -46,16 +45,17 @@ public class CustomCalculatorFilter implements Filter {
 
             try {
                 calculatorRequest = objectMapper.readValue(request1, Object.class);
-            }
-            catch (Exception ex){
-                calculatorRequest = request1;
-            }
-            calculatorResponse = objectMapper.readValue(response1, Object.class);
+                calculatorResponse = objectMapper.readValue(response1, Object.class);
 
-            MDC.put("requestBody",request1);
-            MDC.put("responseBody",response1);
-            log.info("calculator request======>", kv("requestBody",calculatorRequest));
-            log.info("calculator response=====>", kv("responseBody",calculatorResponse));
+            } catch (Exception ex) {
+                calculatorRequest = request1;
+                calculatorResponse = response1;
+            }
+
+            MDC.put("requestBody", request1);
+            MDC.put("responseBody", response1);
+            log.info("calculator request======>", kv("requestBody", calculatorRequest));
+            log.info("calculator response=====>", kv("responseBody", calculatorResponse));
 
             responseWrapper.copyBodyToResponse();
         }
