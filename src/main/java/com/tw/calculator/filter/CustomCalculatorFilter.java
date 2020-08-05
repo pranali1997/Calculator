@@ -2,6 +2,7 @@ package com.tw.calculator.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.MDC;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.ContentCachingRequestWrapper;
 import org.springframework.web.util.ContentCachingResponseWrapper;
@@ -51,10 +52,10 @@ public class CustomCalculatorFilter implements Filter {
             }
             calculatorResponse = objectMapper.readValue(response1, Object.class);
 
-
+            MDC.put("requestBody",request1);
+            MDC.put("responseBody",response1);
             log.info("calculator request======>", kv("requestBody",calculatorRequest));
             log.info("calculator response=====>", kv("responseBody",calculatorResponse));
-
 
             responseWrapper.copyBodyToResponse();
         }
