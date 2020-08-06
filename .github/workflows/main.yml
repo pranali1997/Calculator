@@ -20,8 +20,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: checkout code
-        - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -38,3 +38,8 @@ jobs:
           with:
             arguments: clean build
 
+      - name: Upload jar artifact
+          uses: actions/upload-artifact@v1
+          with:
+            name: buildjar
+            path: build/libs/calculator-0.0.1-SNAPSHOT.jar
