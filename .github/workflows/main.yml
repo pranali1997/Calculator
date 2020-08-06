@@ -32,11 +32,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
-      - name: Create Build Artifact
-        uses: eskatos/gradle-command-action@v1
-        with:
-          arguments: clean build
     
       - name: Upload jar artifact
         uses: actions/upload-artifact@v1
