@@ -23,16 +23,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
       - name: caching
         uses: actions/cache@v1
         with:
@@ -51,3 +41,27 @@ jobs:
         with:
           name: buildjar
           path: build/libs/calculator-0.0.1-SNAPSHOT.jar
+
+
+  #   Push image to GitHub Packages.
+  push:
+    # Ensure test job passes before pushing image.
+    needs: build
+
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Download file buildJar
+        uses: actions/download-artifact@v1
+        with:
+          name: buildjar
+
+      - name: Build image
+        run: |
+          mkdir -p build/libs
+          mv buildjar/calculator-0.0.1-SNAPSHOT.jar build/libs
+          docker build -t image .
