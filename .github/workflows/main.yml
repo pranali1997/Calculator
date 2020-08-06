@@ -21,7 +21,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout code
-        - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -34,7 +34,7 @@ jobs:
           echo test, and deploy your project.
 
       - name: Create Build Artifact
-          uses: eskatos/gradle-command-action@v1
-          with:
-            arguments: clean build
+        uses: eskatos/gradle-command-action@v1
+        with:
+          arguments: clean build
 
