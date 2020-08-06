@@ -37,4 +37,9 @@ jobs:
         uses: eskatos/gradle-command-action@v1
         with:
           arguments: clean build
-
+    
+      - name: Upload jar artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: buildjar
+          path: build/libs/calculator-0.0.1-SNAPSHOT.jar
