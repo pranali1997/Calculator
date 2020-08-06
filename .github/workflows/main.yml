@@ -31,3 +31,28 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+
+    #   Push image to GitHub Packages.
+    push:
+      # Ensure test job passes before pushing image.
+      needs: build
+
+      runs-on: ubuntu-latest
+      if: github.event_name == 'push'
+
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v2
+
+        - name: Download file buildJar
+          uses: actions/download-artifact@v1
+          with:
+            name: buildjar
+
+        - name: Build image
+          run: |
+            mkdir -p build/
+            mv buildjar/libs/calculator-0.0.1-SNAPSHOT.jar build/libs
+            docker build -t image .
+
