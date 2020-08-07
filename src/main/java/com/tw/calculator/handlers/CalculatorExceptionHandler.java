@@ -21,18 +21,18 @@ import static net.logstash.logback.argument.StructuredArguments.kv;
 @ControllerAdvice
 public class CalculatorExceptionHandler {
 
-    public void logException(Exception ex){
-        InternalErrorCodes errorCode= InternalErrorCodes.valueOf("unexpected exception");
-
-        log.error("Exception occurred------->",kv("error code",errorCode.getCode()));
-    }
+//    public void logException(Exception ex){
+//        InternalErrorCodes errorCode= InternalErrorCodes.valueOf("unexpected exception");
+//
+//        log.error("Exception occurred------->",kv("error code",errorCode.getCode()));
+//    }
     @ExceptionHandler(DivisionNotPossibleException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
     public CalculatorFailureResponse divisionExceptionHandle(DivisionNotPossibleException ex) {
         Map<String, String> errors = new HashMap<>();
-        errors.put(InternalErrorCodes.CAN_NOT_BE_DIVIDED_BY_ZERO.toString(), ex.getErrorMessage());
-        return new CalculatorFailureResponse().message("DIVISION_BY_ZERO").reasons(errors);
+        errors.put(ex.getInternalErrorCodes().toString(), ex.getErrorMessage());
+        return new CalculatorFailureResponse().message(ex.getInternalErrorCodes().toString()).reasons(errors);
     }
 
     @ExceptionHandler(InvalidFormatException.class)

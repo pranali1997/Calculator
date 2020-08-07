@@ -7,3 +7,8 @@ services:
     environment:
       - spring_datasource_url=jdbc:postgresql://host.docker.internal:5432/calculator
       - spring_profiles_active=dev
+    labels:
+      collect_logs_using_filebeat: "true"
+      convert_logs_to_json_object: "true"
+    networks:
+      - calculatornetwork

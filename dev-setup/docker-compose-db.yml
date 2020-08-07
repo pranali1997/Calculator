@@ -8,3 +8,5 @@ services:
       - POSTGRES_DB=calculator
       - POSTGRES_USER=calculator
       - POSTGRES_PASSWORD=postgres
+    networks:
+      - calculatornetwork
