@@ -27,14 +27,16 @@ public class CalculatorController {
         this.calculatorService = calculatorService;
     }
 
+    String number1="number1", number2="number2", result="result", eventCode="EventCode", details="details",divisionSuccessful="divisionSuccessful";
+
     @PostMapping("/sum")
     public ResponseEntity sum(@RequestBody InputRequest inputRequest) {
         int addition = calculatorService.addition(inputRequest);
         ObjectNode mapper = new ObjectMapper().createObjectNode();
-        mapper.put("number1", inputRequest.getNumber1());
-        mapper.put("number2", inputRequest.getNumber2());
-        mapper.put("result", inputRequest.getResult());
-        log.info("successful summation--->", kv("EventCode", "divisionSuccessful"), kv("details", mapper.toString()));
+        mapper.put(number1, inputRequest.getNumber1());
+        mapper.put(number2, inputRequest.getNumber2());
+        mapper.put(result, inputRequest.getResult());
+        log.info("successful summation--->", kv(eventCode, divisionSuccessful), kv(details, mapper.toString()));
         return new ResponseEntity(addition, HttpStatus.OK);
     }
 
@@ -42,10 +44,10 @@ public class CalculatorController {
     public ResponseEntity sub(@RequestBody InputRequest inputRequest) {
         int subtraction = calculatorService.subtraction(inputRequest);
         ObjectNode mapper = new ObjectMapper().createObjectNode();
-        mapper.put("number1", inputRequest.getNumber1());
-        mapper.put("number2", inputRequest.getNumber2());
-        mapper.put("result", inputRequest.getResult());
-        log.info("successful subtraction--->", kv("EventCode", "divisionSuccessful"), kv("details", mapper.toString()));
+        mapper.put(number1, inputRequest.getNumber1());
+        mapper.put(number2, inputRequest.getNumber2());
+        mapper.put(result, inputRequest.getResult());
+        log.info("successful subtraction--->", kv(eventCode, divisionSuccessful), kv(details, mapper.toString()));
         return new ResponseEntity(subtraction, HttpStatus.OK);
     }
 
@@ -53,10 +55,10 @@ public class CalculatorController {
     public ResponseEntity div(@RequestBody InputRequest inputRequest) throws DivisionNotPossibleException, NoSuchFieldException {
         int division = calculatorService.division(inputRequest);
         ObjectNode mapper = new ObjectMapper().createObjectNode();
-        mapper.put("number1", inputRequest.getNumber1());
-        mapper.put("number2", inputRequest.getNumber2());
-        mapper.put("result", inputRequest.getResult());
-        log.info("successful division--->", kv("EventCode", "divisionSuccessful"), kv("details", mapper.toString()));
+        mapper.put(number1, inputRequest.getNumber1());
+        mapper.put(number2, inputRequest.getNumber2());
+        mapper.put(result, inputRequest.getResult());
+        log.info("successful division--->", kv(eventCode, divisionSuccessful), kv(details, mapper.toString()));
         return new ResponseEntity(division, HttpStatus.OK);
     }
 

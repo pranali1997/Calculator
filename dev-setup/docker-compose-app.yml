@@ -7,6 +7,12 @@ services:
     environment:
       - spring_datasource_url=jdbc:postgresql://host.docker.internal:5432/calculator
       - spring_profiles_active=dev
+      - keycloak.realm=servicestarterrealm
+      - keycloak.auth-server-url=http://host.docker.internal:8000/auth
+      - keycloak.resource=servicestarterclient
+      - keycloak.bearer-only=true
+      - keycloak.credentials.secret=d792e492-5712-4ab3-8b3f-27ff8bbc9d6d
+      - security.type=keycloak
     labels:
       collect_logs_using_filebeat: "true"
       convert_logs_to_json_object: "true"

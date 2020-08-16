@@ -18,7 +18,7 @@ public class SwaggerConfig {
 
     @Bean
     public Docket customOpenAPI() {
-        return new Docket(DocumentationType.SWAGGER_2)
+        return new Docket(DocumentationType.OAS_30)
                 .useDefaultResponseMessages(false)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.tw.calculator"))

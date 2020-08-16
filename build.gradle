@@ -15,8 +15,40 @@ configurations {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
+//    maven {
+//        //name = "open-api-client"
+//        url = uri("https://maven.pkg.github.com/pranali1997/open-api-client")
+//        credentials {
+//            username = 'pranali1997'
+//            password = '84c05260a35c82af9d20feb2dc68fd35505e1a22'
+//        }
+//    }
+//    maven {
+//        url = uri("https://maven.pkg.github.com/cd-jump-start/bank-service-api")
+//        credentials {
+//            username = getProjectProperty('gpusername')
+//            password = getProjectProperty('gptoken')
+//        }
+//    }
+    maven {
+        name = "demo2"
+        url = uri("https://maven.pkg.github.com/pranali1997/demo2")
+        credentials {
+            username = "pranali1997"
+            password = "2a2e076199d71d1456b67e8df0cb3e4e00695902"
+        }
+    }
 }
+
+//    String getProjectProperty(String propertyName) {
+//        String propertyValue = "null"
+//        if (hasProperty(propertyName)) {
+//            propertyValue = this.properties[propertyName]
+//        }
+//        return propertyValue
+//    }
 
 bootRun {
     bootRun.systemProperty 'spring.profiles.active', "dev"
@@ -42,9 +74,16 @@ dependencies {
     compile 'io.micrometer:micrometer-registry-prometheus'
     implementation 'net.logstash.logback:logstash-logback-encoder:6.3'
     implementation "io.springfox:springfox-boot-starter:3.0.0"
-//
-//    compile group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
-//    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
-
+    compile 'com.thoughtworks:openapidemo2:1.1.1'
+    implementation 'org.keycloak:keycloak-spring-boot-starter:6.0.1'
+    implementation 'org.keycloak:keycloak-spring-security-adapter:10.0.1'
+    compile 'org.springframework.boot:spring-boot-starter-actuator:2.2.1.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    compile 'io.micrometer:micrometer-registry-prometheus'
 }
 
+dependencyManagement {
+    imports {
+        mavenBom "org.keycloak.bom:keycloak-adapter-bom:3.4.1.Final"
+    }
+}

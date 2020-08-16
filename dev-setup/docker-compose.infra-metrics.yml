@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  prometheus:
+    container_name: pm_con
+    image: prom/prometheus
+    restart: always
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - calculatornetwork
+  grafana:
+    container_name: gf_con
+    image: grafana/grafana
+    restart: always
+    ports:
+      - "5000:3000"
+    volumes:
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    networks:
+      - calculatornetwork
