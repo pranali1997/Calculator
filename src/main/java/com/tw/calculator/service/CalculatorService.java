@@ -4,11 +4,15 @@ import com.tw.calculator.errorCodes.InternalErrorCodes;
 import com.tw.calculator.exceptions.DivisionNotPossibleException;
 import com.tw.calculator.model.InputRequest;
 import com.tw.calculator.repository.CalculatorRepository;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Retry(name = " calculatorservice")
+@CircuitBreaker(name = "calculatorservice")
 public class CalculatorService {
 
     private final CalculatorRepository calculatorRepository;
